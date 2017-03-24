@@ -3,6 +3,19 @@
     <i><%= @place.address %></i>
     <br/><br/>
     <p><%= @place.description %></p>
+    <div class="clear"></div>
+    <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
+          <%= f.input :picture %>
+          <%= f.input :caption %>
+          <%= f.submit "Upload Photos", class: 'btn btn-primary' %>
+      <% end %>
+      
+  
+     <% @place.photos.each do |photo| %> 
+        <%= image_tag photo.picture %>
+        <%= photo.caption %>
+     <% end %>
+
     
     <% if @place.latitude.present? && @place.longitude.present? %>
     
