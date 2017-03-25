@@ -2,13 +2,17 @@
     <div class="booyah-box col-10 offset-1">
         <h1><%= link_to place.name, place_path(place) %></h1><br />
         <i><%= place.address %></i><br />
-        <br />
-        <p><%= place.description %></p><br />
-        
-        <% if place.user.present? %>
-            <small>-<%= place.user.email %></small>
-        <% end %>
-
+        <p><%= place.description %></p>
+       
+    <% if place.user.present? %>
+      <small><%= place.user.email %></small>
+    <% end %>
+  
+    <% if place.photos.present? %>
+        <%= image_tag place.photos.last.picture, class: 'image' %>
+        <%= place.photos.last.caption %>
+    <% end %>
+    
     <% if place.comments.present? %>
       <div class="col-12">
           <blockquote>
