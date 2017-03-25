@@ -76,19 +76,17 @@
 
   <div class="clear"></div>
 
+
   <div class="col-10 offset-1">
     <h1 class="float-left">Comments</h1>
     <br class="clear" />
     <br />
-    <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary btn-md" data-toggle="modal" data-target="#myModal">
-      Add a Comment
-    </button>
-    </div>
-  <div class="clear"></div>
+    <!-- Button trigger modal Add Comment -->
+    <%= link_to 'Add a Comment', '#', class: "btn btn-primary", data: {toggle: 'modal', target: '#commentModal'} %>
+  </div>
 
   <!-- Modal -->
-  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal fade" id="commentModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
