@@ -20,12 +20,15 @@
           <li class="nav-item">
             <%= link_to new_place_path, class: 'nav-link' do %>
               <i class="fa fa-plus-circle"></i>
-              New Place
+              Add a Restaurant
             <% end %>        
           </li>
         </ul>
         <ul class="navbar-nav">
           <% if user_signed_in? %>
+            <li class="nav-item">
+              <%= link_to 'My Profile', user_path(current_user), class: 'nav-link' %>
+            </li>
             <li class="nav-item">
               <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class: 'nav-link' %>
             </li>
@@ -36,7 +39,7 @@
             <li class="nav-item">
               <%= link_to 'Sign In', new_user_session_path, class: 'nav-link' %>
             </li>
-          <% end %>  
+          <% end %>
         </ul>
       </div>
     </nav>
