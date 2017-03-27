@@ -1,4 +1,4 @@
-
+<div class="slider_container">
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -6,17 +6,15 @@
   </ol>
   <div class="carousel-inner" role="listbox">
     <div class="carousel-item active">
-      <%= link_to image_tag 'slider1.jpg', class: "col-12" %>
+      <%= link_to image_tag 'slider1.jpg' %>
       <div class="carousel-caption d-md-block">
-        <h3>Find all the veg friendly spots</h3>
-        <p>...</p>
+        <h3>Find all the veg friendly spots </h3><br />
       </div>
     </div>
     <div class="carousel-item">
-       <%= link_to image_tag 'slider2.jpg', class: "col-12" %>
+       <%= link_to image_tag 'slider2.jpg' %>
        <div class="carousel-caption d-md-block">
         <h3>And the vegetarian only ones</h3>
-        <p>...</p>
       </div>
     </div>
   </div>
@@ -29,6 +27,7 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
+
 <% @places.each do |place|%>
     <div class="booyah-box col-10 offset-1">
         <h1><%= link_to place.name, place_path(place) %></h1><br />
